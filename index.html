@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Početna - Techbusters</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="natpis">
+            <h1>Obrazovanje nema<br> <span style="color: #FFFF3F;">ograničenja.</span></h1>
+            <p>Ne postoji nijedna prepreka koja može da vas onemogući da u potpunosti iskoristite svoj potencijal <br>za sticanje obrazovanja i širite svoje znanje. Pridružite se našem timu i poboljšajte svoje <br> veštine već danas!</p>
+            <button><a style="color: white; text-decoration: none;" href="#scrollIndex">Saznaj više</a></button>
+        </div>
+    </div>
+    <section class="about">
+        <div class="offers">
+            <h1 id="scrollIndex" class="hidden">Usluge</h1>
+        </div>
+        <div class="boxes">
+            <div class="box logo hidden">
+                <h1>Konsultacije</h1>
+                <p>Razgovor sa mentorom će pomoći i vama da izaberete pravi program školovanja, kao i njemu da stekne uvid o vašem trenutnom nivou.</p>
+            </div>
+            <div class="box logo hidden">
+                <h1>Stepen obrazovanja</h1>
+                <p>Naš tim vam pruža nekoliko obrozvnih statusa: osnovno obrazovanje, srednje obrazovanje, fakultet kao i master studije.</p>
+            </div>
+            <div class="box logo hidden">
+                <h1>Zagarantovana karijera</h1>
+                <p>Uz naš tim, imate obezbeđen i siguran put do uspešne, stabilne i profitabilne karijere u širokom izboru kompanija zahvaljujući našim saradnicima.</p>
+            </div>
+        </div>
+    </section>
+    <section class="stranice">
+        <h1>Istražite</h1>
+        <p>Pogledajte još aktuelnih stranica naše platforme:</p>
+        <div class="red">
+            <div class="link">
+                <img src="Slike/tim.jpg" alt="">
+                <div class="layer">
+                    <a target="_blank" style="text-decoration: none;" href="about.html"><h3>NAŠ TIM</h3></a>
+                </div>
+            </div>
+            <div class="link">
+                <img src="Slike/nivo obrazovanja.jpg" alt="">
+                <div class="layer">
+                    <a target="_blank" style="text-decoration: none;" href="institucije.html"><h3>INSTITUCIJE</h3></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="forma">
+        <h1 id="pridruzite">Pridružite nam se</h1>
+        <div class="form-container">
+            <h1>Enter Details</h1>
+            <form id="userForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="disease">Disease Type</label>
+                    <select id="disease" name="disease" required>
+                        <option value="None">None</option>
+                        <option value="Wheelchair">Wheelchair</option>
+                        <option value="Blindness">Blindness</option>
+                        <option value="Deaf">Deaf</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&#169; Copyright Techbusters 2024</p>
+    </footer>
+</body>
+</html>

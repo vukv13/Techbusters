@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provera znanja</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2575fc;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 8px;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .question input[type="radio"] {
+            display: none;
+        }
+
+        .question input[type="radio"]:checked + label {
+            background-color: #2575fc;
+            color: #fff;
+            border-color: #2575fc;
+            box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #6a11cb;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #2575fc;
+            transform: translateY(-2px);
+        }
+
+        .result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2575fc;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Provera znanja</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. Kada je počeo Drugi svetski rat?</h3>
+                <input type="radio" id="q1a1" name="q1" value="1945.">
+                <label for="q1a1">1945.</label>
+                <input type="radio" id="q1a2" name="q1" value="1936.">
+                <label for="q1a2">1936.</label>
+                <input type="radio" id="q1a3" name="q1" value="1939.">
+                <label for="q1a3">1939.</label>
+            </div>
+
+            <div class="question">
+                <h3>2. Koliko iznosi koren iz 625?</h3>
+                <input type="radio" id="q2a1" name="q2" value="15">
+                <label for="q2a1">15</label>
+                <input type="radio" id="q2a2" name="q2" value="25">
+                <label for="q2a2">25</label>
+                <input type="radio" id="q2a3" name="q2" value="20">
+                <label for="q2a3">20</label>
+            </div>
+
+            <div class="question">
+                <h3>3. Da li se kaže spojiti ili spoiti?</h3>
+                <input type="radio" id="q3a1" name="q3" value="Spojiti">
+                <label for="q3a1">Spojiti</label>
+                <input type="radio" id="q3a2" name="q3" value="Spoiti">
+                <label for="q3a2">Spoiti</label>
+            </div>
+
+            <div class="question">
+                <h3>4. Kolika je brzina za pređeni put 16m, a vreme 2s?</h3>
+                <input type="radio" id="q4a1" name="q4" value="4">
+                <label for="q4a1">4</label>
+                <input type="radio" id="q4a2" name="q4" value="6">
+                <label for="q4a2">6</label>
+                <input type="radio" id="q4a3" name="q4" value="8">
+                <label for="q4a3">8</label>
+            </div>
+
+            <div class="question">
+                <h3>5. Koliko je (465-28)*2?</h3>
+                <input type="radio" id="q5a1" name="q5" value="874">
+                <label for="q5a1">874</label>
+                <input type="radio" id="q5a2" name="q5" value="875">
+                <label for="q5a2">875</label>
+                <input type="radio" id="q5a3" name="q5" value="876">
+                <label for="q5a3">876</label>
+            </div>
+
+            <div class="question">
+                <h3>6. Koja je najduža reka na svetu?</h3>
+                <input type="radio" id="q6a1" name="q6" value="Nil">
+                <label for="q6a1">Nil</label>
+                <input type="radio" id="q6a2" name="q6" value="Dunav">
+                <label for="q6a2">Dunav</label>
+                <input type="radio" id="q6a3" name="q6" value="Amazon">
+                <label for="q6a3">Amazon</label>
+            </div>
+
+            <div class="question">
+                <h3>7. Šta je mitohondrija?</h3>
+                <input type="radio" id="q7a1" name="q7" value="organ">
+                <label for="q7a1">organ</label>
+                <input type="radio" id="q7a2" name="q7" value="ćelijska organela">
+                <label for="q7a2">ćelijska organela</label>
+                <input type="radio" id="q7a3" name="q7" value="hrana">
+                <label for="q7a3">hrana</label>
+            </div>
+
+            <div class="question">
+                <h3>8. Šta je škrapa?</h3>
+                <input type="radio" id="q8a1" name="q8" value="zatvorena depresija, trouglastog oblika">
+                <label for="q8a1">zatvorena depresija, trouglastog oblika</label>
+                <input type="radio" id="q8a2" name="q8" value="zatvorena depresija, kvadratnog oblika">
+                <label for="q8a2">zatvorena depresija, kvadratnog oblika</label>
+                <input type="radio" id="q8a3" name="q8" value="zatvorena depresija, ovalnog oblika">
+                <label for="q8a3">zatvorena depresija, ovalnog oblika</label>
+            </div>
+
+            <div class="question">
+                <h3>9. Koja fizička veličina se meri menzurom?</h3>
+                <input type="radio" id="q9a1" name="q9" value="zapremina">
+                <label for="q9a1">zapremina</label>
+                <input type="radio" id="q9a2" name="q9" value="pritisak">
+                <label for="q9a2">pritisak</label>
+                <input type="radio" id="q9a3" name="q9" value="masa">
+                <label for="q9a3">masa</label>
+            </div>
+
+            <div class="question">
+                <h3>10. Kakvu zajednicu čine sve veverice u jednoj šumi?</h3>
+                <input type="radio" id="q10a1" name="q10" value="koloniju">
+                <label for="q10a1">koloniju</label>
+                <input type="radio" id="q10a2" name="q10" value="populaciju">
+                <label for="q10a2">populaciju</label>
+                <input type="radio" id="q10a3" name="q10" value="biosferu">
+                <label for="q10a3">biosferu</label>
+            </div>
+
+            <div class="question">
+                <h3>11. Ko je napisao dela "Jelena, žena koje nema" i "Aska i vuk"?</h3>
+                <input type="radio" id="q11a1" name="q11" value="Ivo Andrić">
+                <label for="q11a1">Ivo Andrić</label>
+                <input type="radio" id="q11a2" name="q11" value="Branko Ćopić">
+                <label for="q11a2">Branko Ćopić</label>
+                <input type="radio" id="q11a3" name="q11" value="Laza Lazarević">
+                <label for="q11a3">Laza Lazarević</label>
+            </div>
+
+            <div class="question">
+                <h3>12. Šta označava pojam feud?</h3>
+                <input type="radio" id="q12a1" name="q12" value="pripadnika najmoćnijeg plemstva">
+                <label for="q12a1">pripadnika najmoćnijeg plemstva</label>
+                <input type="radio" id="q12a2" name="q12" value="robu proizvedenu za sopstvene potrebe">
+                <label for="q12a2">robu proizvedenu za sopstvene potrebe</label>
+                <input type="radio" id="q12a3" name="q12" value="zemljišni posed u srednjem veku">
+                <label for="q12a3">zemljišni posed u srednjem veku</label>
+            </div>
+
+            <div class="question">
+                <h3>13. Šta je kondenzacija?</h3>
+                <input type="radio" id="q13a1" name="q13" value="prelazak iz tečne u gasovitu">
+                <label for="q13a1">prelazak iz tečne u gasovitu</label>
+                <input type="radio" id="q13a2" name="q13" value="prelazak iz čvrste u gasovitu">
+                <label for="q13a2">prelazak iz čvrste u gasovitu</label>
+                <input type="radio" id="q13a3" name="q13" value="prelazak iz gasovite u tečnu">
+                <label for="q13a3">prelazak iz gasovite u tečnu</label>
+            </div>
+
+            <div class="question">
+                <h3>14. Srbija je po geografskom položaju kakva zemlja?</h3>
+                <input type="radio" id="q14a1" name="q14" value="balkanska">
+                <label for="q14a1">balkanska</label>
+                <input type="radio" id="q14a2" name="q14" value="alpska">
+                <label for="q14a2">alpska</label>
+                <input type="radio" id="q14a3" name="q14" value="skandinavska">
+                <label for="q14a3">skandinavska</label>
+            </div>
+
+            <div class="question">
+                <h3>15. Kako se zove period od hiljadu godina?</h3>
+                <input type="radio" id="q15a1" name="q15" value="era">
+                <label for="q15a1">era</label>
+                <input type="radio" id="q15a2" name="q15" value="milenijum">
+                <label for="q15a2">milenijum</label>
+                <input type="radio" id="q15a3" name="q15" value="decenija">
+                <label for="q15a3">decenija</label>
+            </div>
+
+            <div class="question">
+                <h3>16. Zagađenje izaziva plućne bolesti.</h3>
+                <input type="radio" id="q16a1" name="q16" value="tačno">
+                <label for="q16a1">tačno</label>
+                <input type="radio" id="q16a2" name="q16" value="netačno">
+                <label for="q16a2">netačno</label>
+            </div>
+
+            <div class="question">
+                <h3>17. Na kojoj temperaturi voda ključa?</h3>
+                <input type="radio" id="q17a1" name="q17" value="100°C">
+                <label for="q17a1">100°C</label>
+                <input type="radio" id="q17a2" name="q17" value="1000°C">
+                <label for="q17a2">1000°C</label>
+                <input type="radio" id="q17a3" name="q17" value="500°C">
+                <label for="q17a3">500°C</label>
+            </div>
+
+            <div class="question">
+                <h3>18. Od kog materijala se pravi folija za pakovanje hrane?</h3>
+                <input type="radio" id="q18a1" name="q18" value="bakra">
+                <label for="q18a1">bakra</label>
+                <input type="radio" id="q18a2" name="q18" value="olova">
+                <label for="q18a2">olova</label>
+                <input type="radio" id="q18a3" name="q18" value="aluminijuma">
+                <label for="q18a3">aluminijuma</label>
+            </div>
+
+            <div class="question">
+                <h3>19. (16*2)/4+x=17</h3>
+                <input type="radio" id="q19a1" name="q19" value="7">
+                <label for="q19a1">7</label>
+                <input type="radio" id="q19a2" name="q19" value="9">
+                <label for="q19a2">9</label>
+                <input type="radio" id="q19a3" name="q19" value="8">
+                <label for="q19a3">8</label>
+            </div>
+
+            <div class="question">
+                <h3>20. Odredi književni rod u sledećem odlomku: Pilipenda pusti glas, koji je nalikovao na režanje ljuta psa, pa izbuljivši krvave oči na ženu, zapita krozzube:- A hoćeš li da se upišemo u tu... tu... vjeru?- Sačuvaj Gospode! - reče Jela ustuknuvši i prekrstivši se</h3>
+                <input type="radio" id="q20a1" name="q20" value="lirika">
+                <label for="q20a1">lirika</label>
+                <input type="radio" id="q20a2" name="q20" value="drama">
+                <label for="q20a2">drama</label>
+                <input type="radio" id="q20a3" name="q20" value="epika">
+                <label for="q20a3">epika</label>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const correctAnswers = {
+                q1: '1939.',
+                q2: '25',
+                q3: 'Spojiti',
+                q4: '8',
+                q5: '874',
+                q6: 'Amazon',
+                q7: 'ćelijska organela',
+                q8: 'zatvorena depresija, ovalnog oblika',
+                q9: 'zapremina',
+                q10: 'populaciju',
+                q11: 'Ivo Andrić',
+                q12: 'zemljišni posed u srednjem veku',
+                q13: 'prelazak iz gasovite u tečnu',
+                q14: 'balkanska',
+                q15: 'milenijum',
+                q16: 'tačno',
+                q17: '100°C',
+                q18: 'aluminijuma',
+                q19: '9',
+                q20: 'epika',
+            };
+
+            let score = 0;
+            const formData = new FormData(this);
+            for (let question in correctAnswers) {
+                if (formData.get(question) === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `You scored ${score} out of ${Object.keys(correctAnswers).length}!`;
+        });
+    </script>
+</body>
+</html>
